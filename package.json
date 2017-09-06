@@ -1,0 +1,27 @@
+{
+  "name": "headless-chrome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel-node": "babel-node ./index.js",
+    "flow": "babel src/ -d lib/",
+    "babel-nodemon": "nodemon --exec npm run babel-node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-launcher": "^0.6.0",
+    "lighthouse-logger": "^1.0.1",
+    "mongoose": "^4.11.10",
+    "nodemon": "^1.12.0",
+    "puppeteer": "^0.10.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0"
+  }
+}
