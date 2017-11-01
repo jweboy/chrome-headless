@@ -60,7 +60,7 @@ const upsertUser = require('./utils/users')
 
     //* 遍历列表，插入到数据库
     let users = []
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 20; i++) {
       //* 跳转到指定页面
       await page.goto(`${searchUrl}&p=${i}`)
 
@@ -83,13 +83,13 @@ const upsertUser = require('./utils/users')
           browser.close()
         })
 
-      // users.map(({ username, email }) => {
-      //   upsertUser({
-      //     username,
-      //     email,
-      //     dateCrawled: new Date()
-      //   })
-      // })
+      users.map(({ username, email }) => {
+        upsertUser({
+          username,
+          email,
+          dateCrawled: new Date()
+        })
+      })
     }
     await browser.close()
   })()

@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "babel-node": "babel-node ./index.js",
+    "mall": "babel-node ./mall",
     "flow": "babel src/ -d lib/",
-    "babel-nodemon": "nodemon --exec npm run babel-node"
+    "babel-nodemon": "nodemon --exec npm run babel-node",
+    "babel-nodemon-mall": "nodemon --exec npm run mall"
   },
   "keywords": [],
   "author": "",

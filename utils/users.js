@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Users = require('../models/users')
 
 const upsertUser = (user) => {
-  const DB_URL = 'mongodb://localhost:27017/test'
+  const DB_URL = 'mongodb://localhost:27017/users'
 
   console.log(mongoose.connect)
 
